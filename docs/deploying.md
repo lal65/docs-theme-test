@@ -1,8 +1,10 @@
 ---
-layout: home
+layout: default
 subtitle_before: Penn State World Campus
 title: Prospect Site
 subtitle_after: Deployment Guide
+menu_title: Deployment Guide
+menu_order: 1
 ---
 # Deploying Code
 For the most part, this application is host-agnostic. Deploying enterprise

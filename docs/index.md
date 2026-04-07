@@ -4,6 +4,8 @@ subtitle_before: Penn State World Campus
 title: Prospect Site
 subtitle_after: Technical User Guide
 image: /assets/demo-image.webp
+menu_title: Home
+menu_order: 0
 ---
 
 ## Welcome
