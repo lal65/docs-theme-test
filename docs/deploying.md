@@ -4,9 +4,9 @@ subtitle_before: Penn State World Campus
 title: Prospect Site
 subtitle_after: Deployment Guide
 menu_title: Deployment Guide
-menu_order: 1
+menu_order: 2
 ---
-# Deploying Code
+## Deploying Code
 For the most part, this application is host-agnostic. Deploying enterprise
 grade Drupal applications involves a handful of highly structured, repeatable
 steps:
@@ -22,7 +22,7 @@ steps:
 Certain managed hosting providers can make life easier, but at the core of it
 all, these steps are all the same. Everywhere. Every time.
 
-## Manual Deployment
+### Manual Deployment
 Long before CI/CD pipelines roamed the earth, our ancestors bravely deployed
 code by hand. Armed with SSH access, a checklist, and a healthy amount of
 adrenaline, they would:
@@ -46,13 +46,13 @@ above exactly, and ensure:
 2. No configuration changes are made directly in production
 3. A rollback plan exists before starting
 
-## Acquia Hosting
+### Acquia Hosting
 For the most part, deployments on Acquia hosted environments are **_completely
 automated_**.  The **_wcprospect8_** application utilizes a "shared
 responsibilities" deployment model that attempts to bring the best of all
 worlds to the business.
 
-### How to deploy applications on Acquia?
+#### How to deploy applications on Acquia?
 Applications are **_always_** backed by a version control system. A deployment
 in Acquia is always tied to an individual commit hash. This can either be a tag
 or a branch. For non-production environments, deploying either flavor is
@@ -65,11 +65,11 @@ Upon deploying a branch or tag, the
 series of 8 steps listed above are performed automatically with no developer
 intervention required.
 
-### Continuous Delivery: Acquia Style
+#### Continuous Delivery: Acquia Style
 See https://github.com/psu-online-education/acquia-devops-hooks for more
 detailed information on exactly how the dev-ops side works.
 
-### Safety Precautions
+#### Safety Precautions
 There are several best practice safety precautions that should be followed
 religiously for production deployments.
 
@@ -84,7 +84,7 @@ religiously for production deployments.
    customer here. Every time a mistake happens, it's an opportunity to refine
    processes to safeguard against it happening again.
 
-#### Test Deployment
+##### Test Deployment
 To perform a test deployment, follow these steps:
 1. Deploy the tag that is currently deployed to production to **_test_** (note
    the continuous delivery scripting **_may fail_** when the tag is switched if
@@ -98,5 +98,5 @@ To perform a test deployment, follow these steps:
 4. Deploy the **_new tag_** to the test environment and carefully examine the
    deployment task log
 
-## Pantheon Hosting
+### Pantheon Hosting
 We can only dream about it 🤤.
