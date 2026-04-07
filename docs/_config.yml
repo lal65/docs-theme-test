@@ -31,9 +31,10 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
-theme: lal65/docs-theme@1.x
+remote_theme: lal65/docs-theme@1.x
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
 
 # Exclude from processing.
 # The following items will not be processed, by default.
