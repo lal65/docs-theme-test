@@ -33,7 +33,13 @@ knowledge base article.
 In order to access a development database for the prospect site, one has to
 be a member of the Penn State Acquia account. For help with getting started
 with Penn State Acquia email
-[support@outreach.psu.edu](mailto:support@outreach.psu.edu).
+[support@outreach.psu.edu](mailto:support@outreach.psu.edu) or open a
+ServiceNow Request with the following fields:
+
+| SNOW Field           | Value                 |
+|----------------------|-----------------------|
+| **Service Offering** | OOE: Drupal on Acquia |
+| **Assignment Group** | OOE-SYSOPS            |
 
 After gaining access to the platform, one has to set up the Acquia Cloud API.
 For more information on setting this up, see the
