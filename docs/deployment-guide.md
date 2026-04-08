@@ -2,8 +2,9 @@
 layout: default
 subtitle_before: Penn State World Campus
 title: Prospect Site
-subtitle_after: Deployment Guide
-menu_title: Deployment Guide
+subtitle_after: Deployment guide
+image: assets/deployment-guide.svg
+menu_title: Deployment guide
 menu_order: 2
 ---
 ## Deploying Code

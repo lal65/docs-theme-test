@@ -1,8 +1,9 @@
 ---
 layout: default
-subtitle_before: Penn State World Campus
+subtitle_before: Prospect Site
 title: Custom Modules
 subtitle_after: Bureau of Labor Statistics Integration
+image: assets/custom-modules/bls.svg
 menu_title: Bureau of Labor Statistics Integration
 menu_order: 2
 ---

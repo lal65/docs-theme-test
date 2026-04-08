@@ -2,8 +2,9 @@
 layout: default
 subtitle_before: Penn State World Campus
 title: Prospect Site
-subtitle_after: Automated Testing
-menu_title: Automated Testing
+subtitle_after: Automated testing
+image: assets/automated-testing.svg
+menu_title: Automated testing
 menu_order: 1
 ---
 > Test automation is the use of software (separate from the software being tested) for controlling the execution of tests and comparing actual outcome with predicted.

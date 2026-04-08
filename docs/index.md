@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: default
 subtitle_before: Penn State World Campus
 title: Prospect Site
 subtitle_after: Technical User Guide
@@ -17,4 +17,4 @@ over time.
 ## Application Deployments
 For the most part, this is a very typical Drupal application.
 
-See the [Deploying Guide](deploying.md) for more information.
+See the [Deploying Guide](deployment-guide.md) for more information.
