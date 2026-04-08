@@ -146,6 +146,7 @@ depending on the nature of the test case.
 <details>
   <summary>Visual testing</summary>
   <div markdown="1">
+
 ### Visual testing
 Visual tests target the actual appearance of the application front-end. Visual
 testing is provided by the [Ghost Inspector](https://ghostinspector.com/)
