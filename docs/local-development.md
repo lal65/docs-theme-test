@@ -3,10 +3,11 @@ layout: default
 subtitle_before: Penn State World Campus
 title: Prospect Site
 subtitle_after: Local development
-image: assets/custom-modules.svg
+image: assets/local-development.svg
 menu_title: Local development
 menu_order: 1
 ---
+
 ## Local Development Guide
 There are three things that every local CMS environment needs: code, files, and
 a database. Drupal is no exception.

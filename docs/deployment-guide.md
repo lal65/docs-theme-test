@@ -58,7 +58,8 @@ Applications are **_always_** backed by a version control system. A deployment
 in Acquia is always tied to an individual commit hash. This can either be a tag
 or a branch. For non-production environments, deploying either flavor is
 permissible, but for production environments, deploying a **_tag_** is highly
-recommended because tags are immutable.  Read https://docs.acquia.com/acquia-cloud-platform/working-environments#section-managing-environments
+recommended because tags are immutable.  Read the
+[Acquia Platform Documentation](https://docs.acquia.com/acquia-cloud-platform/working-environments#section-managing-environments)
 for more in-depth information on **_how_** to perform the various tasks that
 follow.
 
@@ -98,6 +99,9 @@ To perform a test deployment, follow these steps:
    files, and database as production!)
 4. Deploy the **_new tag_** to the test environment and carefully examine the
    deployment task log
+
+#### Ready to try a deployment?
+Refer to the [step-by-step guide]({{ "deployment-guide/acquia-deployments.html" | relative_url }}) to walk you through it.
 
 ### Pantheon Hosting
 We can only dream about it 🤤.
