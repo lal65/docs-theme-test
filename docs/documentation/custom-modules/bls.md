@@ -3,9 +3,9 @@ layout: default
 subtitle_before: Prospect Site
 title: Custom Modules
 subtitle_after: Bureau of Labor Statistics Integration
-image: assets/documentation/custom-modules/bls.svg
+image: inline-assets/documentation/custom-modules/bls.svg
 menu_title: Bureau of Labor Statistics Integration
-menu_order: 2
+menu_order: 1
 ---
 ## Summary
 The BLS Integration module provides a turnkey Drupal solution for interfacing
@@ -183,7 +183,7 @@ serves two purposes:
 2. Displaying a real-time data synchronization status update for users that
    have a role assigned that has the `synchronize bls data` permission.
 
-![The Manage BLS Data user interface is displayed showing a status message of "There are currently no pending changes" and two links to various data sets]({{ "/assets/modules/bls/manage-bls-data.png" | relative_url }})
+![The Manage BLS Data user interface is displayed showing a status message of "There are currently no pending changes" and two links to various data sets]({{ "/assets/documentation/custom-modules/bls/manage-bls-data.png" | relative_url }})
 
 ##### Viewing Live Data Sets
 Live data sets may be previewed through the Drupal admin UI.
@@ -203,7 +203,7 @@ all **_Job outlook_** entities.
 - The **_Programs_** column displays all programs that the job outlook should
   be displayed on.
 
-![Job outlooks are displayed in tabular format]({{ "/assets/modules/bls/job-outlooks.png" | relative_url }})
+![Job outlooks are displayed in tabular format]({{ "/assets/documentation/custom-modules/bls/job-outlooks.png" | relative_url }})
 
 ###### Job titles
 The **_Job titles_** data set can be found under **_Content_** →
@@ -213,20 +213,20 @@ all **_Job title_** entities.
 - The **_Programs_** column displays all programs that the job title should
   be displayed on.
 
-![Job titles are displayed in tabular format]({{ "/assets/modules/bls/job-titles.png" | relative_url }})
+![Job titles are displayed in tabular format]({{ "/assets/documentation/custom-modules/bls/job-titles.png" | relative_url }})
 
 ##### Synchronizing Data Sets
 When the module detects that updated BLS data exists, content managers are
 notified via the status message on the **_Manage BLS Data_** overview.
 
-![When pending content exists, there is a message saying "There are currently pending changes. To review, press the Synchronize BLS Data button"]({{ "/assets/modules/bls/pending-changes-overview.png" | relative_url }})
+![When pending content exists, there is a message saying "There are currently pending changes. To review, press the Synchronize BLS Data button"]({{ "/assets/documentation/custom-modules/bls/pending-changes-overview.png" | relative_url }})
 
 Upon pressing **_Synchronize BLS Data_**, the content manager is presented with
 a form that displays a red/green differential of the content that is currently
 active versus the content that is pending to review. In the following example,
 a typo in the "Accountants and Auditors" job outlook is corrected.
 
-![The job with UID 13-2011 has its OCC title changed from "Accountants and Autitors typo" to "Accountants and Auditors"]({{ "/assets/modules/bls/synchronize-form.png" | relative_url }})
+![The job with UID 13-2011 has its OCC title changed from "Accountants and Autitors typo" to "Accountants and Auditors"]({{ "/assets/documentation/custom-modules/bls/synchronize-form.png" | relative_url }})
 
 Upon pressing the **_Synchronize_** button, the pending data will be made
 active and all caches that hold the pages associated with the newly
@@ -238,12 +238,12 @@ the end-user is presented with an error diagnostic in an "Error message".
 
 On the **_Manage BLS Data_** page
 
-![A client error occurred because of a 404 not found response on the Manage BLS Data page]({{ "/assets/modules/bls/synchronization-error.png" | relative_url }})
+![A client error occurred because of a 404 not found response on the Manage BLS Data page]({{ "/assets/documentation/custom-modules/bls/synchronization-error.png" | relative_url }})
 
 On the **_Manual approval is required._** page, note the **_Synchronize_**
 button is removed.
 
-![A client error occurred because of a 404 not found response on the Manual approval is required page]({{ "/assets/modules/bls/synchronization-error-manual-approval.png" | relative_url }})
+![A client error occurred because of a 404 not found response on the Manual approval is required page]({{ "/assets/documentation/custom-modules/bls/synchronization-error-manual-approval.png" | relative_url }})
 
 A similar error message will be presented if there is any sort of
 synchronization error that happens during the process itself. Data integrity

@@ -3,7 +3,7 @@ layout: default
 subtitle_before: Penn State World Campus
 title: Documentation
 subtitle_after: Custom modules
-image: assets/documentation/custom-modules.svg
+image: inline-assets/documentation/custom-modules.svg
 menu_title: Custom modules
 menu_order: 4
 ---

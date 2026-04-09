@@ -3,7 +3,7 @@ layout: default
 subtitle_before: Penn State World Campus
 title: Prospect Site
 subtitle_after: Processes
-image: assets/processes.svg
+image: inline-assets/processes.svg
 menu_title: Processes
 menu_order: 1
 ---
@@ -78,7 +78,7 @@ organization following the reporting line changes.
 - Zachary Ishler <zri5004@psu.edu>, Applications Developer
 
 ### Processes
-Despite organizational upheaval, several processes continue survive.
+Despite organizational upheaval, several processes continue to survive.
 
 #### Applications Developer Peer Review
 GitHub is the platform where all applications developer peer review happens.

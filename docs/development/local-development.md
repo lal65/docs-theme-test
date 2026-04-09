@@ -3,7 +3,7 @@ layout: default
 subtitle_before: Penn State World Campus
 title: Development
 subtitle_after: Local development
-image: assets/development/local-development.svg
+image: inline-assets/development/local-development.svg
 menu_title: Local development
 menu_order: 1
 ---

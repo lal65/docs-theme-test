@@ -3,7 +3,7 @@ layout: default
 subtitle_before: Penn State World Campus
 title: Development
 subtitle_after: Deployment guide
-image: assets/development/deployment-guide.svg
+image: inline-assets/development/deployment-guide.svg
 menu_title: Deployment guide
 menu_order: 2
 ---

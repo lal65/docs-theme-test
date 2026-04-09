@@ -3,7 +3,7 @@ layout: default
 subtitle_before: Penn State World Campus
 title: Deployment guide
 subtitle_after: Acquia deployments
-image: assets/development/deployment-guide/acquia-deployments.svg
+image: inline-assets/development/deployment-guide/acquia-deployments.svg
 menu_title: Acquia deployments
 menu_order: 1
 ---
