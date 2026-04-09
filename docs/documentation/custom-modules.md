@@ -1,9 +1,9 @@
 ---
 layout: default
 subtitle_before: Penn State World Campus
-title: Prospect Site
+title: Documentation
 subtitle_after: Custom modules
-image: assets/custom-modules.svg
+image: assets/documentation/custom-modules.svg
 menu_title: Custom modules
 menu_order: 4
 ---

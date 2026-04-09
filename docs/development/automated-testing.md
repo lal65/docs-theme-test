@@ -1,9 +1,9 @@
 ---
 layout: default
 subtitle_before: Penn State World Campus
-title: Prospect Site
+title: Development
 subtitle_after: Automated testing
-image: assets/automated-testing.svg
+image: assets/development/automated-testing.svg
 menu_title: Automated testing
 menu_order: 3
 ---

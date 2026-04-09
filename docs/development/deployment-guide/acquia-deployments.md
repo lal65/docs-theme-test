@@ -1,9 +1,9 @@
 ---
 layout: default
 subtitle_before: Penn State World Campus
-title: Prospect Site
+title: Deployment guide
 subtitle_after: Acquia deployments
-image: assets/deployment-guide/acquia-deployments.svg
+image: assets/development/deployment-guide/acquia-deployments.svg
 menu_title: Acquia deployments
 menu_order: 1
 ---
