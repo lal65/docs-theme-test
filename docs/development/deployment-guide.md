@@ -101,7 +101,7 @@ To perform a test deployment, follow these steps:
    deployment task log
 
 #### Ready to try a deployment?
-Refer to the [step-by-step guide]({{ "deployment-guide/acquia-deployments.html" | relative_url }}) to walk you through it.
+Refer to the [step-by-step guide]({{ "development/deployment-guide/acquia-deployments.html" | relative_url }}) to walk you through it.
 
 ### Pantheon Hosting
 We can only dream about it 🤤.
