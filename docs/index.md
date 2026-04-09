@@ -52,8 +52,3 @@ campaign pages are fed into the top of the funnel for follow-up correspondence.
 The webform module for Drupal is an enterprise grade form builder. From simple
 contact and feedback forms to complex multistep applications, webform can
 do it all, even integrating with third party platforms with no code.
-
-## Application Deployments
-For the most part, this is a very typical Drupal application.
-
-See the [Deploying Guide](deployment-guide.md) for more information.
