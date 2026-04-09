@@ -55,6 +55,20 @@ This application accepts authenticated HTTP POST requests from Informatica. It
 stores the pending information in a temporary holding area until a business
 representative can manually review and approve the data.
 
+#### Architectural Security Risks
+This architecture is problematic from a security perspective.
+
+1. An extraordinarily weak authentication mechanism is all that Informatica
+   presently supports
+2. It is inherently more risky to accept POST requests than it is to simply
+   make GET requests to retrieve data
+3. The data being transmitted from Salesforce to this application is public 
+   domain knowledge
+
+The only question is why. It would be a much more secure architecture to simply
+host the public domain data in a location that this application can reach out
+and read it versus having a proprietary third party platform POST it.
+
 ### REST Endpoint
 The REST endpoint located at `/api/v2/crm_import` accepts POST with the
 `application/json` content type. Authorized requests to this endpoint result
@@ -110,3 +124,118 @@ serves two purposes:
 1. Providing links to view the currently live data sets.
 2. Displaying a real-time data synchronization status update for users that
    have a role assigned that has the `synchronize crm data` permission.
+
+![The Manage CRM Data user interface is displayed showing a status message of "There are currently no pending changes" and two links to various data sets]({{ "/assets/documentation/custom-modules/crm/manage-crm-data.png" | relative_url }})
+
+##### Viewing Live Data Sets
+Live data sets may be previewed through the Drupal admin UI.
+
+###### Countries
+The **_Countries_** data set can be found under **_Content_** →
+**_Manage CRM Data_** → **_View Countries_**. The read-only table displays
+all **_Country_** entities.
+- The **_Code_** column is the unique identifier of the entity, which _should_
+  correspond to a valid ISO-3166-1 alpha3 code
+- The **_Label_** column is the end-user facing label
+- The **_Two character code_** column _should_ correspond to a valid ISO-3166-1
+  alpha2 code
+
+![Countries are displayed in tabular format]({{ "/assets/documentation/custom-modules/crm/countries.png" | relative_url }})
+
+###### Military branches
+The **_Military branches_** data set can be found under **_Content_** →
+**_Manage CRM Data_** → **_View Military Branches_**. The read-only table
+displays all **_Military branch_** entities.
+- The **_Code_** column is the unique identifier of the military branch
+- The **_Label_** column is the end-user facing label
+- The **_Sort order_** column determines the order that multiple military
+  branches appear in select lists
+
+![Military branches are displayed in tabular format]({{ "/assets/documentation/custom-modules/crm/military-branches.png" | relative_url }})
+
+###### Military statuses
+The **_Military statuses_** data set can be found under **_Content_** →
+**_Manage CRM Data_** → **_View Military Statuses_**. The read-only table
+displays all **_Military status_** entities.
+- The **_Code_** column is the unique identifier of the military status
+- The **_Label_** column is the end-user facing label
+- The **_Sort order_** column determines the order that multiple military
+  statuses appear in select lists
+- The **_Display branch_** column controls the conditional field visibility of
+  a military branch select element
+
+For example, the **_None_** option for a military status will result in the
+military branch select not appearing for the end-user _(if the user is not in
+the military, they will obviously not belong to a branch, so why ask them?)_.
+
+![Military statuses are displayed in tabular format]({{ "/assets/documentation/custom-modules/crm/military-statuses.png" | relative_url }})
+
+###### Partners
+The **_Partners_** data set can be found under **_Content_** →
+**_Manage CRM Data_** → **_View Partners_**. The read-only table
+displays all **_Partner_** entities.
+- The **_Code_** column is the unique identifier of the partner
+- The **_Label_** column is the end-user facing label
+
+![Partners are displayed in tabular format]({{ "/assets/documentation/custom-modules/crm/partners.png" | relative_url }})
+
+###### Programs
+The **_Programs_** data set can be found under **_Content_** →
+**_Manage CRM Data_** → **_View Programs_**. The read-only table
+displays all **_Programs_** entities.
+- The **_Code_** column is the unique identifier of the partner
+- The **_Label_** column is the end-user facing label
+- The **_Send to Inside Track_** column determines whether information requests
+  to this program are eligible for follow-up contact by Inside Track
+- The **_Spring Start date_** column is the optional ISO-8601 formatted start
+  date of the spring term
+- The **_Spring Deadline_** column is the optional ISO-8601 formatted
+  application deadline date for the spring term
+- The **_Spring Early deadline_** column is the optional ISO-8601 formatted
+  early application deadline date for the spring term
+- The **_Spring Deadline Extended_** column is a flag for whether the
+  application deadline for the spring term has been extended
+- The **_Summer Start date_** column is the optional ISO-8601 formatted start
+  date of the summer term
+- The **_Summer Deadline_** column is the optional ISO-8601 formatted
+  application deadline date for the summer term
+- The **_Summer Early deadline_** column is the optional ISO-8601 formatted
+  early application deadline date for the summer term
+- The **_Summer Deadline Extended_** column is a flag for whether the
+  application deadline for the summer term has been extended
+- The **_Fall Start date_** column is the optional ISO-8601 formatted start
+  date of the fall term
+- The **_Fall Deadline_** column is the optional ISO-8601 formatted
+  application deadline date for the fall term
+- The **_Fall Early deadline_** column is the optional ISO-8601 formatted
+  early application deadline date for the fall term
+- The **_Fall Deadline Extended_** column is a flag for whether the
+  application deadline for the fall term has been extended
+- The **_Visible Semester Deadlines_** column is a value from 0 to 3 that
+  determines the number of upcoming deadlines to display
+- The **_Hide Deadline_** column is a flag that determines whether the next
+  application deadline should be displayed
+
+- ![Programs are displayed in tabular format]({{ "/assets/documentation/custom-modules/crm/programs.png" | relative_url }})
+
+###### States
+The **_States_** data set can be found under **_Content_** →
+**_Manage CRM Data_** → **_View States_**. The read-only table
+displays all **_State_** entities.
+- The **_Code_** column is the unique identifier of the state
+- The **_Label_** column is the end-user facing label
+
+![States are displayed in tabular format]({{ "/assets/documentation/custom-modules/crm/states.png" | relative_url }})
+
+###### Topics
+The **_Topics_** data set can be found under **_Content_** →
+**_Manage CRM Data_** → **_View Topics_**. The read-only table
+displays all **_Topic_** entities.
+- The **_Code_** column is the unique identifier of the topic
+- The **_Label_** column is the end-user facing label
+- The **_Default topic_** column is a flag that determines if the topic is one
+  of the default topics
+- The **_Programs_** column is a list of programs that should appear under the
+  topic
+
+![Topics are displayed in tabular format]({{ "/assets/documentation/custom-modules/crm/topics.png" | relative_url }})
