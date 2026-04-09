@@ -20,10 +20,10 @@ a very unfortunate relationship with the central groups and their vendor.
 
 ## Solution Architecture
 
-[!WARNING]
-The Applications Developers did **_not_** have any meaningful influence over
-how the central group or vendor set anything up. This is **_not_** an
-architecture that would have been chosen from the Applications Developers side.
+> [!WARNING]
+> The Applications Developers did **_not_** have any meaningful influence over
+> how the central group or vendor set anything up. This is **_not_** an
+> architecture that would have been chosen from the Applications Developers side.
 
 &nbsp;
 
