@@ -19,12 +19,12 @@ Prior to the reorganization of both IT and Marketing, the governing body of all
 application changes consisted of representatives from all primary partners and
 stakeholder groups.
 
-#### Director of Web Strategy
+#### Director of User Experience and Insights
 The director of web strategy is the senior that presides over governance and is
 the escalation path for times when decisions need to be made. When things need
 to get done, this is the contact.
 
-- Dave Housley <ddh16@psu.edu>
+- Dave Housley <ddh16@psu.edu>, Director of User Experience and Insights
 
 #### Content Management
 The content managers are the primary staff users of the application.
