@@ -26,6 +26,13 @@ to get done, this is the contact.
 
 - Dave Housley <ddh16@psu.edu>, Director of User Experience and Insights
 
+#### Accessibility and Design
+As the primary designer and the canonical source of truth for brand experience
+this role has the final say on any end-user facing feature in terms of
+presentation and function.
+
+- Matt Ryan <mqr5815@psu.edu>, Assistant Director of User Experience and Insights
+
 #### Content Management
 The content managers are the primary staff users of the application.
 
