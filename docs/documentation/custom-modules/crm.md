@@ -239,3 +239,75 @@ displays all **_Topic_** entities.
   topic
 
 ![Topics are displayed in tabular format]({{ "/assets/documentation/custom-modules/crm/topics.png" | relative_url }})
+
+##### Synchronizing Data Sets
+When the module detects that updated CRM data exists, content managers are
+notified via the status message on the **_Manage CRM Data_** overview.
+
+![When pending content exists, there is a message saying "There is new CRM data for you to review. View Changes"]({{ "/assets/documentation/custom-modules/crm/pending-changes-overview.png" | relative_url }})
+
+Upon clicking **_View Changes_**, the content manager is presented with
+a form that displays a red/green differential of the content that is currently
+active versus the content that is pending to review. In the following example,
+a new country, "New California Republic" is added and a topic is modified to
+have one program removed and another program added.
+
+![The New California Republic country is added and the finance campaign topic has program "Finance (Bachelor of Science)" removed and the "Applied Statistics (Master's Degree)" added"]({{ "/assets/documentation/custom-modules/crm/synchronize-form.png" | relative_url }})
+
+Upon pressing the **_Synchronize_** button, the pending data will be made
+active and all caches that hold the pages associated with the newly
+synchronized data will be flushed.
+
+###### Synchronization Errors
+If the pending data is updated while a content manager is reviewing a
+changeset, the content manager will be unable to complete synchronization due
+to their review having been made stale.
+
+Upon clicking the "Synchronize" button, they will be presented with an error
+message stating:
+
+> The reference data has been updated while you were reviewing the pending
+> changes. Please refresh this page and re-review the changes to proceed.
+
+&nbsp;
+
+![A stale review error prevents synchronization]({{ "/assets/documentation/custom-modules/crm/stale-review-error.png" | relative_url }})
+
+#### BLS Data Entities
+The entity types defined by this module are extremely light-weight.
+
+1. These entity types are **_not_** revisionable.  The **_ECRM_** team is the
+   canonical source this data and assumes all accountability for maintaining 
+   historical revisions as needed for legal compliance.
+2. These entity types **_cannot_** be viewed individually on their own pages.
+3. These entity types are **_read only_**.  There are no edit forms for these
+   entities.  The only way to modify them is via the synchronization
+   functionality.
+
+These constraints may seem unusual, but the enterprise architecture design was
+decided without consulting the Applications Developers.
+
+This module **_only_** concerns itself with the storage, access control, and
+synchronization of said entities. It guarantees that there is always a
+highly available persistent data source available for downstream consumers
+regardless of organizational upheavals.
+
+## Requirements
+This module requires no modules outside of Drupal core.
+
+## Installation
+Install as you would normally install a contributed Drupal module. For further information, see [Installing Drupal Modules](https://www.drupal.org/extending-drupal/installing-drupal-modules).
+
+## Configuration
+This module has no configuration.
+
+## Maintainers
+- Matthew David Webb <mdw15@psu.edu>, Applications Developer Manager
+- Brianne Williams <bnh10@psu.edu>, Applications Developer
+- Kyle Leber <kjl16@psu.edu>, Applications Developer
+- Luke Leber <lal65@psu.edu>, Applications Developer
+- Zachary Ishler <zri5004@psu.edu>, Applications Developer
+
+## Support
+Submit bug reports and feature suggestions, or track changes in the
+[issue queue](https://github.com/psu-online-education/crm/issues).
