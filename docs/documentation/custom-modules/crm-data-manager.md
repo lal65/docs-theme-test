@@ -4,7 +4,7 @@ subtitle_before: Prospect Site
 title: Custom Modules
 subtitle_after: Legacy CRM Integration
 image: inline-assets/documentation/custom-modules/deprecated.svg
-menu_title: <svg style="color:var(--invent-orange)" class="sprite sprite--fa-exclamation-circle" aria-hidden="true" viewBox="0 0 512 512"><use xlink:href="#fa-exclamation-circle"></use></svg> Legacy CRM Integration
+menu_title: <svg style="color:var(--invent-orange)" class="sprite sprite--fa-exclamation-circle" aria-label="Deprecated" viewBox="0 0 512 512"><use xlink:href="#fa-exclamation-circle"></use></svg> Legacy CRM Integration
 menu_order: 3
 ---
 ## Summary
