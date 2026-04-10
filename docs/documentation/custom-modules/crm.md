@@ -16,7 +16,7 @@ menu_order: 2
 
 The CRM Integration module provides a highly secure, defensive solution for
 interfacing with the Penn State ECRM Group. It is a very strange solution for
-a very unfortunate relationship with the central groups and their vendor.
+a strange relationship with the central groups and their vendor.
 
 Extraordinary precautions were taken to ensure that full control of the data
 that appears on the website firmly rests with the World Campus business. There
