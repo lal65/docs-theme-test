@@ -20,8 +20,6 @@ and governance policies.
 
 ## Solution Architecture
 This solution was originally planned out with no support from Penn State IT.
-Applications Developers were not involved in any meetings or discussions that
-took place between Marketing and IT.
 
 See the [Workfront Issue](https://experience.adobe.com/#/@pennstateoutreach/so:pennstateoutreach-Production/workfront/issue/617bf77c0024e80be85c3281191c6e11/overview) for more history.
 
