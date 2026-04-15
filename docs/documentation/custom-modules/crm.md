@@ -30,7 +30,6 @@ automated enforced governance pipeline.
 > how the central group or vendor set anything up. This is **_not_** an
 > architecture that would have been chosen from the Applications Developers side.
 
-&nbsp;
 
 ### Organizations Involved
 TODO: Fill in details about ECRM, IWA, Informatica, Salesforce...who is in
@@ -97,7 +96,6 @@ via the
 > system's state. The information is stored in the database and will be lost
 > when the database is dropped or the site is re-installed from configuration.
 
-&nbsp;
 
 The following State keys are written:
 - crm_b2b_partners
@@ -269,7 +267,6 @@ message stating:
 > The reference data has been updated while you were reviewing the pending
 > changes. Please refresh this page and re-review the changes to proceed.
 
-&nbsp;
 
 ![A stale review error prevents synchronization]({{ "/assets/documentation/custom-modules/crm/stale-review-error.png" | relative_url }})
 

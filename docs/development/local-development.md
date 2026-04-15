@@ -82,7 +82,6 @@ error message containing:
 
 > Command pm:list was not found. Drush was unable to query the database. As a result, many commands are unavailable. Re-run your command with --debug to see relevant log messages.
 
-&nbsp;
 
 This happens because there is presently no database set up.  Ultimately the
 following message will be presented.

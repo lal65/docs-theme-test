@@ -9,7 +9,6 @@ menu_order: 3
 ---
 > Test automation is the use of software (separate from the software being tested) for controlling the execution of tests and comparing actual outcome with predicted.
 
-&nbsp;
 
 ## Testing Strategy
 The testing strategy for the prospects application is multi-faceted.

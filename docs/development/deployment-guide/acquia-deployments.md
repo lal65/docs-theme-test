@@ -99,7 +99,6 @@ execution.
 #### Rollback plans exist for a reason
 > If something goes wrong **_don't panic_**.  Things have gone wrong before, and we've all lived to tell the tale. It's how senior developers are made. Baptism by fire!
 
-&nbsp;
 
 In the event that it is determined that a rollback is necessary, execute the
 rollback plan as it's written.  **_Usually_** the rollback plan is simply to
