@@ -5,7 +5,7 @@ title: Custom Modules
 subtitle_after: Bureau of Labor Statistics Integration
 image: inline-assets/documentation/custom-modules/bls.svg
 menu_title: Bureau of Labor Statistics Integration
-menu_order: 1
+menu_order: 3
 ---
 ## Summary
 The BLS Integration module provides a turnkey Drupal solution for interfacing

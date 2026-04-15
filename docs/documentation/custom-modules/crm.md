@@ -5,7 +5,7 @@ title: Custom Modules
 subtitle_after: Customer Relationship Management Integration
 image: inline-assets/documentation/custom-modules/crm.svg
 menu_title: Customer Relationship Management Integration
-menu_order: 2
+menu_order: 4
 ---
 [comment]: <> (Acronyms for the various actor groups)
 *[CRM]: Customer Relationship Management
