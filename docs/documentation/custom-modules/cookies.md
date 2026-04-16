@@ -5,7 +5,7 @@ title: Custom Modules
 subtitle_after: Cookies
 image: inline-assets/documentation/custom-modules/cookies.svg
 menu_title: Cookies
-menu_order: 7
+menu_order: 8
 ---
 
 ## Summary

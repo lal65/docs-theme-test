@@ -5,7 +5,7 @@ title: Custom Modules
 subtitle_after: Campaign pages
 image: inline-assets/documentation/custom-modules/campaign-pages.svg
 menu_title: Campaign pages
-menu_order: 5
+menu_order: 6
 ---
 
 ## Summary

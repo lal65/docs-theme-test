@@ -5,7 +5,7 @@ title: Custom Modules
 subtitle_after: Colorbox
 image: inline-assets/documentation/custom-modules/colorbox.svg
 menu_title: Colorbox
-menu_order: 6
+menu_order: 7
 ---
 
 ## Summary
