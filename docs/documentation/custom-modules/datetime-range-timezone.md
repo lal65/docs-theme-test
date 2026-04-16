@@ -5,7 +5,7 @@ title: Custom Modules
 subtitle_after: Datetime range timezone
 image: inline-assets/documentation/custom-modules/datetime-range-timezone.svg
 menu_title: Datetime range timezone
-menu_order: 10
+menu_order: 11
 ---
 ## Summary
 The Datetime range timezone module is a fork of the contributed module and
