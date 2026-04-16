@@ -5,7 +5,7 @@ title: Custom Modules
 subtitle_after: Datetime range timezone
 image: inline-assets/documentation/custom-modules/datetime-range-timezone.svg
 menu_title: Datetime range timezone
-menu_order: 8
+menu_order: 9
 ---
 ## Summary
 The Datetime range timezone module is a fork of the contributed module and
@@ -59,7 +59,7 @@ This module requires no modules outside drupal core.
 Install as you would normally install a contributed Drupal module. For further information, see [Installing Drupal Modules](https://www.drupal.org/extending-drupal/installing-drupal-modules).
 
 ## Configuration
-This module has no configuration.
+This module does not expose any configuration.
 
 ## Maintainers
 - Matthew David Webb <mdw15@psu.edu>, Applications Developer Manager

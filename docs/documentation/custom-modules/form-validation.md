@@ -5,7 +5,7 @@ title: Custom Modules
 subtitle_after: Form validation
 image: inline-assets/documentation/custom-modules/form-validation.svg
 menu_title: Form validation
-menu_order: 9
+menu_order: 10
 ---
 ## Summary
 The Form validation module overrides the `FormErrorHandler` service provided by
@@ -65,7 +65,7 @@ This module requires no modules outside drupal core.
 Install as you would normally install a contributed Drupal module. For further information, see [Installing Drupal Modules](https://www.drupal.org/extending-drupal/installing-drupal-modules).
 
 ## Configuration
-This module has no configuration.
+This module does not expose any configuration.
 
 ## Maintainers
 - Matthew David Webb <mdw15@psu.edu>, Applications Developer Manager

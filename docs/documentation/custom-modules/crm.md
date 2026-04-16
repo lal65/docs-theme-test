@@ -5,7 +5,7 @@ title: Custom Modules
 subtitle_after: Customer Relationship Management Integration
 image: inline-assets/documentation/custom-modules/crm.svg
 menu_title: Customer Relationship Management Integration
-menu_order: 7
+menu_order: 8
 ---
 [comment]: <> (Acronyms for the various actor groups)
 *[CRM]: Customer Relationship Management
@@ -296,7 +296,7 @@ This module requires no modules outside of Drupal core.
 Install as you would normally install a contributed Drupal module. For further information, see [Installing Drupal Modules](https://www.drupal.org/extending-drupal/installing-drupal-modules).
 
 ## Configuration
-This module has no configuration.
+This module does not expose any configuration.
 
 ## Maintainers
 - Matthew David Webb <mdw15@psu.edu>, Applications Developer Manager
