@@ -5,7 +5,7 @@ title: Custom Modules
 subtitle_after: Form validation
 image: inline-assets/documentation/custom-modules/form-validation.svg
 menu_title: Form validation
-menu_order: 16
+menu_order: 17
 ---
 ## Summary
 The Form validation module overrides the `FormErrorHandler` service provided by
