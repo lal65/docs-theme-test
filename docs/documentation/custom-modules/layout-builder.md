@@ -83,6 +83,35 @@ Navigation or activation of interactive controls within other sections will
 result in more `section_view` events which are able to produce very specific
 reports and also be aggregated together for holistic content type reporting. 
 
+### Backgrounds
+Non-full-width layouts also support several background configurations which
+allow the use of colors, sprites, positioning, padding, and orientation. Proper
+use of backgrounds is left to the discretion of the designer.
+
+#### Colors
+Presently there is only one color option approved by design: Light grey. This
+is because darker background colors require additional effort in the design
+system to ensure that automatic color contrasting applies appropriately. Both
+the default and Light grey options fully support all components such that
+sufficient contrast is guaranteed.
+
+#### Images (sprites)
+There are four supported configurations:
+- Shield (left)
+- Shield (right)
+- Hub geometric (left)
+- Hub geometric (right)
+
+#### Positioning
+The background can be either shrink-wrapped to the content or expanded across
+the entire viewport.
+
+#### Padding options
+There are three padding options:
+- small
+- medium
+- large
+
 ## Types of Layouts
 There are presently 11 types of layouts on this application:
 - One column
@@ -161,6 +190,56 @@ control.
 - Custom ToC label - this is a free-form text field that allows for any table
   of contents label to be entered
 
+### Specialized layouts
+Some layouts are unique to complex application needs. There are two such
+layouts that have unique qualities.
+
+#### At a glance layouts
+These layouts are intended to be used towards the top of pages. They can
+include various specialized block types that share similar qualities. There
+are two unique configurations for At a glance layouts.
+
+##### Vertical alignment of all child blocks
+This configuration exists to gracefully handle situations where some blocks
+lack a _visible_ heading. It is the design intention to vertically center
+layouts that have at least one child block that lacks a visible heading.
+
+##### Collapsible at small viewports
+This configuration exists to gracefully collapse blocks down into an accordion
+design pattern at small viewport sizes. The exact viewport dimensions that
+trigger collapse will vary based on the number and type of blocks in the
+layout.
+
+#### How to Apply layouts
+These layouts are only used on program pages and were adapted to meet the
+highly complex nature of applying to programs at Penn State. The exact process
+to apply to any given program may wildly vary, some programs having distinct
+prerequisite and such.
+
+There are 4 static regions in this layout in addition to a number of dynamics
+ones. The `intro`, `deadlines`, `application`, and `help` regions are static,
+whereas the `steps` are dynamic. An ordered list semantic is applied to the
+steps, as prospects looking to apply must follow them in order.
+
+## Access Control & Governance
+This module provides additional access control and governance mechanisms on top
+of what is provided out of the box. Historically, there have been four classes
+of content managers on this application: authors, editors, content team, and
+super-editors.
+
+Content team and super-editors are intended to have unfettered access to all
+layouts, regions, and blocks for all content. They are responsible for setting
+up the unique page structure based on manuscripts that are signed off on by
+their stakeholder groups. The initial lift in setting up a new piece of content
+such as a campaign landing page is fairly high in that each page will have a
+unique design, sometimes involving a great number of highly interactive layout
+types.
+
+Authors and editors are intended to be limited to modifying _existing_ blocks.
+These staff members, some of which are the stakeholders themselves, are the
+operational content maintainers. They lack the ability to fundamentally change
+the page design, but can easily manage their content in ways that were
+pre-approved.
 
 ## Requirements
 This module requires no modules outside drupal core.
@@ -171,8 +250,7 @@ information, see
 [Installing Drupal Modules](https://www.drupal.org/extending-drupal/installing-drupal-modules).
 
 ## Configuration
-This module exposes a single configuration: a toggle for globally disabling
-geolocation calls.
+This module does not expose any global configuration.
 
 ## Maintainers
 - Matthew David Webb <mdw15@psu.edu>, Applications Developer Manager
@@ -183,4 +261,4 @@ geolocation calls.
 
 ## Support
 Submit bug reports and feature suggestions, or track changes in the
-[issue queue](https://github.com/psu-online-education/psu_geolocation/issues).
+[issue queue](https://github.com/psu-online-education/psu_layout_builder/issues).
