@@ -27,7 +27,6 @@ There was a request from the SEO/SEM team that the login page be marked as
 `noindex` and `nofollow` to prevent these pages from appearing for non-staff in
 search results.
 
-
 ## User Dashboard Theme Negotiator
 The canonical user entity view display must be rendered with the admin theme.
 This is because the main function of these pages is displaying common editorial
