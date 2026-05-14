@@ -7,6 +7,7 @@ image: inline-assets/documentation/custom-modules/datalayer.svg
 menu_title: DataLayer
 menu_order: 10
 ---
+
 ## Summary
 This module adds a very specific set of DataLayer values (as specified by the
 Analytics Team from mid-2018).
