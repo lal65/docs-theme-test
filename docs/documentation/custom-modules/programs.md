@@ -93,8 +93,8 @@ For rolling deadlines, the `@action_deadline` token is replaced with the string
 "Now".
 
 For non-rolling deadlines, the token is replaced with the string "by
-<deadline>"; where `<deadline>` is the application deadline date displayed in
-the format "F j" if not `farfuture`, or `F j, Y` if `farfuture`. If the deadline is a far-future deadline and is either an early deadline or 
+`{deadline}`"; where `{deadline}` is the application deadline date displayed in
+the format `F j` if not `farfuture`, or `F j, Y` if `farfuture`. If the deadline is a far-future deadline and is either an early deadline or 
 the semester start date occurs after the deadline, then an additional `,`
 character is appended to the date format. This was an editorial requirement
 because string patterns like
@@ -133,8 +133,8 @@ date, the `@result_date` token is replaced with an empty string.
 #### Use Cases
 So far, there are a number of use cases across the application including:
 
-| Format                                                         | Context                                                                   |
-|----------------------------------------------------------------|---------------------------------------------------------------------------|
+| Format                                                           | Context                                                                   |
+|------------------------------------------------------------------|---------------------------------------------------------------------------|
 | `@action @action_deadline @result @result_date`                  | Used in places where punctuation afterwards is not needed                 |
 | `@action @action_deadline @result @result_date.`                 | Used in places where punctution afterwards is needed                      |
 | `<strong>@action @action_deadline</strong> @result @result_date` | Used in places where emphasis is intended on the action versus the result |
