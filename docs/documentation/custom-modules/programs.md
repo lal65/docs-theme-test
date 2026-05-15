@@ -133,12 +133,43 @@ date, the `@result_date` token is replaced with an empty string.
 #### Use Cases
 So far, there are a number of use cases across the application including:
 
-| Format                                                           | Context                                                                   |
-|------------------------------------------------------------------|---------------------------------------------------------------------------|
-| `@action @action_deadline @result @result_date`                  | Used in places where punctuation afterwards is not needed                 |
-| `@action @action_deadline @result @result_date.`                 | Used in places where punctution afterwards is needed                      |
-| `<strong>@action @action_deadline</strong> @result @result_date` | Used in places where emphasis is intended on the action versus the result |
+| Format                                                                                                           | Context                                                                    |
+|------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
+| `@action @action_deadline @result @result_date`                                                                  | Used in places where punctuation afterwards is not needed                  |
+| `@action @action_deadline @result @result_date.`                                                                 | Used in places where punctution afterwards is needed                       |
+| `<strong>@action @action_deadline</strong> @result @result_date`                                                 | Used in places where emphasis is intended on the action versus the result  |
+| `@action <span class="visually-hidden">to the [node:title] program</span> @action_deadline @result @result_date` | Used in places where the program the deadline is for must be disambiguated |
 
+## Next steps block
+The next steps block is a contextually aware custom block type that
+conditionally displays an additional call to action with the intent of
+improving application conversion. This block will only appear if the following
+conditions are met:
+
+1. The current program is accepting applications (as determined by the
+   Salesforce reference data)
+2. The current program has a deadline in the future
+
+If any of the above conditions are not met, this block will remove itself from
+the layout.
+
+It accepts a customizable heading markup element and heading level. The call to
+action is hard-coded with the following properties:
+
+| Property             | Value         |
+|----------------------|---------------|
+| Label                | How to Apply  |
+| Url                  | #how-to-apply |
+| Color                | Alternate     |
+| Color on dark        | Reversed      |
+| Expand to fit        | true          |
+| Icon after           | Chevron right |
+| Tracking description | How to Apply  |
+| Tracking Placement   | Next Steps    |
+
+**Warning! This block type is NOT enrolled in the "auto-hide-on-missing-id"
+functionality! If the program lacks a "#how-to-apply" section, the block will
+still render with a broken CTA button!** 
 
 ### Technical debt
 todo!
