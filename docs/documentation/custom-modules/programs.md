@@ -135,9 +135,9 @@ So far, there are a number of use cases across the application including:
 
 | Format                                                         | Context                                                                   |
 |----------------------------------------------------------------|---------------------------------------------------------------------------|
-| @action @action_deadline @result @result_date                  | Used in places where punctuation afterwards is not needed                 |
-| @action @action_deadline @result @result_date.                 | Used in places where punctution afterwards is needed                      |
-| <strong>@action @action_deadline</strong> @result @result_date | Used in places where emphasis is intended on the action versus the result |
+| `@action @action_deadline @result @result_date`                  | Used in places where punctuation afterwards is not needed                 |
+| `@action @action_deadline @result @result_date.`                 | Used in places where punctution afterwards is needed                      |
+| `<strong>@action @action_deadline</strong> @result @result_date` | Used in places where emphasis is intended on the action versus the result |
 
 
 ### Technical debt
