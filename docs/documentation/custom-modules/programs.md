@@ -310,6 +310,51 @@ omitted from display.
 **Note - If neither the job titles nor employment outlook sections render, the
 block is still displayed, but only an empty div is emitted.**
 
+## Program credits and costs block
+![The program credits and costs block displays credits and cost information in a stylized format.]({{ "/assets/documentation/custom-modules/programs/program-credits-and-costs-block.png" | relative_url }})
+
+The program career information block is a contextually aware custom block type
+that displays a stylized variant of the total credits and tuition costs for the
+current program. The design strategically emphasizes the number of credits and
+makes the cost a secondary data point. This information is sourced from two
+structured data fields on the program. These are required fields, so this block
+is unconditionally displayed.
+
+### Display logic
+If there is a range of credits to display, a slightly smaller font is used.
+
+### Other Considerations
+Due to special design considerations (conditional breakpoints based on sibling
+content blocks), this block can only be placed within **At a glance** layouts.
+This rule is enforced through a **Layout Builder Restriction**.
+
+## Request information block
+![The request information block displays a heading, intro paragraph, and a form.]({{ "/assets/documentation/custom-modules/programs/request-information-block.png" | relative_url }})
+
+The request information block is the feature that drives one of the most
+valuable KPIs, information requests. It features a customizable heading, one or
+more images to randomly display, an introduction paragraph, and a webform.
+
+### Personalized content delivery
+This block utilizes client-side personalization to enhance the visitor
+experience. If the visitor has previously requested information for the
+current program, the heading, intro, and form are all replaced by a link
+to download the program brochure and take the next steps. This is a very
+intentional strategic nudge to get the visitor to take the next step and apply
+to the program.
+
+**Note - this personalization mechanism also causes the Request Information
+call-to-action buttons to be hidden from the page.**
+
+### Special fragment from CRM follow-up campaigns
+The previously mentioned personalized content delivery strategy also takes
+effect when a visitor arrives with the `#info-requested` fragment in the URL.
+The CRM system includes this special fragment in follow-up campaigns sent to
+users that have previously requested information for the program.
+
+## Upcoming program events block
+todo (next)!
+
 ## Technical debt
 todo!
 
