@@ -141,20 +141,15 @@ So far, there are a number of use cases across the application including:
 | `@action <span class="visually-hidden">to the [node:title] program</span> @action_deadline @result @result_date` | Used in places where the program the deadline is for must be disambiguated |
 
 ## Next steps block
+![The next steps block displays up to three pieces of information: a heading, the next deadline, and a call to action]({{ "/assets/documentation/custom-modules/programs/next-steps-block.png" | relative_url }})
+
 The next steps block is a contextually aware custom block type that
 conditionally displays an additional call to action with the intent of
-improving application conversion. This block will only appear if the following
-conditions are met:
+improving application conversion.
 
-1. The current program is accepting applications (as determined by the
-   Salesforce reference data)
-2. The current program has a deadline in the future
-
-If any of the above conditions are not met, this block will remove itself from
-the layout.
-
-It accepts a customizable heading markup element and heading level. The call to
-action is hard-coded with the following properties:
+### Properties
+This block type accepts a customizable heading markup element and heading
+level. The call to action is hard-coded with the following properties:
 
 | Property             | Value         |
 |----------------------|---------------|
@@ -167,11 +162,155 @@ action is hard-coded with the following properties:
 | Tracking description | How to Apply  |
 | Tracking Placement   | Next Steps    |
 
-**Warning! This block type is NOT enrolled in the "auto-hide-on-missing-id"
-functionality! If the program lacks a "#how-to-apply" section, the block will
-still render with a broken CTA button!** 
+### Display logic
+This block will only appear if the current program is accepting applications
+_(as determined by the Salesforce reference data_). If this condition is not
+met, this block will remove itself from the layout.
 
-### Technical debt
+If there are no deadlines in the future, the deadline will be omitted and only
+the heading and call to action will remain.
+
+### Other Considerations
+This block type is conditionally visible based on external conditions! It must
+only be placed in layout configurations that still meet design expectations if
+the current block is abruptly removed without warning.
+
+This block type is **not** enrolled in the "auto-hide-on-missing-id"
+functionality! If the program lacks a "#how-to-apply" section, the block will
+still render with a broken CTA button!
+
+## Application deadline block
+![The application deadline block displays the next application deadline with special stylization]({{ "/assets/documentation/custom-modules/programs/application-deadline-block.png" | relative_url }})
+
+The application deadline block is a contextually aware custom block type that
+conditionally displays the next application deadline in a stylized fashion.
+
+### Display logic
+This block will only appear if the current program is accepting applications
+and has an upcoming deadline _(as determined by the Salesforce reference
+data_). If either condition is not met, this block will remove itself from the
+layout.
+
+### Other Considerations
+Due to special design considerations (conditional breakpoints based on sibling
+content blocks), this block can only be placed within **At a glance** layouts.
+This rule is enforced through a **Layout Builder Restriction**.
+
+## Application deadlines list block
+![The application deadlines list block diplays the next N deadlines for the current program with stylized iconography.]({{ "/assets/documentation/custom-modules/programs/application-deadlines-list-block.png" | relative_url }})
+
+The application deadlines list block is a contextually aware custom block type
+that conditionally displays the next N application deadlines in a stylized
+fashion. The design heavily utilizes iconography to reduce the cognitive effort
+needed to interpret the dates and times by visually tying a deadline to an icon
+that represents the term (spring, summer, or fall). This list carries
+_semantic meaning_, having the terms displayed chronologically.
+
+### Display logic
+This block will only appear if the current program has at least one upcoming 
+deadline _(as determined by the Salesforce reference data_). **Note - it does
+not matter whether the program is accepting applications or not!**
+
+### Other Considerations
+Due to special business needs (completely removing the **Deadlines** region
+from the layout if there are no upcoming deadlines), this block can only be
+placed within the **Deadlines** region within **How to Apply** layout types.
+This rule is enforced through a **Layout Builder Restriction**.
+
+## Program application link block
+The application deadlines list block is a contextually aware custom block type
+that displays a link to the appropriate application. These links have special
+tracking parameters set up.
+
+### Graduate programs
+![Graduate program links go to the Fox Graduate School.]({{ "/assets/documentation/custom-modules/programs/program-application-link-block-graduate.png" | relative_url }})
+
+Graduate program links go to the Fox Graduate School. These are the tracking
+parameters for this configuration:
+
+| Property             | Value                                              |
+|----------------------|----------------------------------------------------|
+| Label                | Penn State Fox Graduate School Application         |
+| Url                  | https://gradschool.psu.edu/admissions/how-to-apply |
+| Color                | hollow-dotted                                      |
+| Color on dark        | default                                            |
+| Expand to fit        | false                                              |
+| Icon after           | Arrow up-right from square                         |
+| Tracking description | Application                                        |
+| Tracking Placement   | How to Apply                                       |
+
+### Undergraduate programs
+![Undergraduate program links go to the MyPennState application.]({{ "/assets/documentation/custom-modules/programs/program-application-link-block-undergraduate.png" | relative_url }})
+
+Undergraduate program links go to the MyPennState application. These are the
+tracking parameters for this configuration:
+
+| Property             | Value                                             |
+|----------------------|---------------------------------------------------|
+| Label                | MyPennState Undergraduate Application             |
+| Url                  | https://mypennstate.psu.edu/index.cfm/login/index |
+| Color                | hollow-dotted                                     |
+| Color on dark        | default                                           |
+| Expand to fit        | false                                             |
+| Icon after           | Arrow up-right from square                        |
+| Tracking description | Application                                       |
+| Tracking Placement   | How to Apply                                      |
+
+### Undergraduate certificates
+![Undergraduate certifiate links go to the Undergraduate Certificate application.]({{ "/assets/documentation/custom-modules/programs/program-application-link-block-undergraduate-certificate.png" | relative_url }})
+
+Undergraduate certificate links go to the MyPennState application. These are
+the tracking parameters for this configuration:
+
+| Property             | Value                                  |
+|----------------------|----------------------------------------|
+| Label                | Undergraduate Certificate Application  |
+| Url                  | /Undergraduate-Certificate-Application |
+| Color                | hollow-dotted                          |
+| Color on dark        | default                                |
+| Expand to fit        | false                                  |
+| Tracking description | Application                            |
+| Tracking Placement   | How to Apply                           |
+
+## Program career information block
+![The program career information block displays job titles and career outlook data.]({{ "/assets/documentation/custom-modules/programs/program-career-information-block.png" | relative_url }})
+
+The program career information block is a contextually aware custom block type
+that displays various career related data for the current program. This data is
+sourced from the
+[Bureau of Labor Statistics Integration Module]({{ "/documentation/custom-modules/bls" | relative_url }}).
+
+There are two primary data points that are formatted and displayed by this
+block: job titles and career outlooks.
+
+### Job titles
+Job titles are simple strings that are displayed in an unordered list.
+
+### Career outlooks
+Career outlooks are complex data that individually consist of a job title,
+employment delta, and total employment projections over the next 10 years. This
+information is augmented by both coloration and iconography to help with
+cognitive load reduction.
+
+### Configuration
+There are a total of five user-configurable customization points: a boolean
+control to display the job titles data, a customizable job titles heading, a
+customizable job titles intro markup snippet, a boolean control to display the
+employment outlook data, and a customizable heading for the employment outlook
+data.
+
+### Display logic
+If the job titles control is disabled _or_ there are no job titles for the
+current program, then the job titles section is omitted from display.
+
+If the employment outlook control is disabled _or_ there are no employment
+outlooks for the current program, then the employment outlook section is
+omitted from display.
+
+**Note - If neither the job titles nor employment outlook sections render, the
+block is still displayed, but only an empty div is emitted.**
+
+## Technical debt
 todo!
 
 ## Requirements
