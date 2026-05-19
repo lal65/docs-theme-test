@@ -197,7 +197,7 @@ content blocks), this block can only be placed within **At a glance** layouts.
 This rule is enforced through a **Layout Builder Restriction**.
 
 ## Application deadlines list block
-![The application deadlines list block diplays the next N deadlines for the current program with stylized iconography.]({{ "/assets/documentation/custom-modules/programs/application-deadlines-list-block.png" | relative_url }})
+![The application deadlines list block displays the next N deadlines for the current program with stylized iconography.]({{ "/assets/documentation/custom-modules/programs/application-deadlines-list-block.png" | relative_url }})
 
 The application deadlines list block is a contextually aware custom block type
 that conditionally displays the next N application deadlines in a stylized
@@ -313,7 +313,7 @@ block is still displayed, but only an empty div is emitted.**
 ## Program credits and costs block
 ![The program credits and costs block displays credits and cost information in a stylized format.]({{ "/assets/documentation/custom-modules/programs/program-credits-and-costs-block.png" | relative_url }})
 
-The program career information block is a contextually aware custom block type
+The program credits and costs block is a contextually aware custom block type
 that displays a stylized variant of the total credits and tuition costs for the
 current program. The design strategically emphasizes the number of credits and
 makes the cost a secondary data point. This information is sourced from two
