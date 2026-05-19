@@ -353,10 +353,48 @@ The CRM system includes this special fragment in follow-up campaigns sent to
 users that have previously requested information for the program.
 
 ## Upcoming program events block
-todo (next)!
+![The upcoming program events block will display all future events related to the current program.]({{ "/assets/documentation/custom-modules/programs/upcoming-program-events-block.png" | relative_url }})
+
+The upcoming program events block is a contextually aware custom block type
+that conditionally displays the all upcoming events related to the current
+program.
+
+### Display logic
+A maximum of three events will be "featured", meaning that the events
+will be visible without the end-user needing to expand an interactive
+component. Any "overflow" events will be placed in a **Progressive Disclosure**
+component.
+
+Links to these events will take the user to a special page that stays within
+the context of the current program. This allows the program to behave as its
+own unique "microsite" within the greater application.
+
+### Other Considerations
+This block type is conditionally visible based on external conditions! It must
+only be placed in layout configurations that still meet design expectations if
+the current block is abruptly removed without warning.
+
 
 ## Technical debt
-todo!
+There is a fair amount of technical debt related to programs in general.
+
+### New deadlines formatter is not widely adopted
+The Deadlines Markup Formatter is relatively new and should be able to replace
+various custom template implementations that are still using older methods.
+
+### Program publishing pipeline is overly complex
+This is an artifact of an overly complex business need which has seemingly
+relaxed quite a bit in recent years. Previously, external audiences which
+could not sign in through Penn State WebSSO, needed read access to unpublished
+programs. To work around this need, there was a "Display program in lists"
+field that was added to form a secondary "published" toggle. Programs that were
+published, but not yet configured to display in lists were for all intents and
+purposes invisible **_except_** to users that knew the exact URL. This business
+requirement was non-negotiable.
+
+This process should be replaced with simply relying on the off-the-shelf
+**Published** status and forcing external audiences to authenticate through
+Microsoft Entra.
 
 ## Requirements
 This module requires the custom `crm_data_manager` and `bls` modules.
