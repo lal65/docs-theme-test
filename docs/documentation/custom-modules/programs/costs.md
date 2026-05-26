@@ -1,7 +1,7 @@
 ---
 layout: default
 subtitle_before: Custom Modules
-title: Events
+title: Programs
 subtitle_after: 'Programs: Costs'
 image: inline-assets/documentation/custom-modules/programs/costs.svg
 menu_title: 'Programs: Costs'

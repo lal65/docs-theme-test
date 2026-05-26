@@ -369,6 +369,13 @@ Links to these events will take the user to a special page that stays within
 the context of the current program. This allows the program to behave as its
 own unique "microsite" within the greater application.
 
+### Special full event route
+This route renders a special minimal header and footer, which keeps the
+end-user focused within the context of the current program. Each of the program
+pages acts as its own "microsite" within the greater application. All features
+available for events are equally supported in this context including embedded
+event registration forms with seamless On24 integration.
+
 ### Other Considerations
 This block type is conditionally visible based on external conditions! It must
 only be placed in layout configurations that still meet design expectations if
