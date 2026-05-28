@@ -238,15 +238,16 @@ from 1 to 3.
 #### CRM limitations and the curious UX problem
 Due to limitations in the downstream CRM marketing, only the first program of
 interest is included in subsequent marketing correspondence. Despite this, the
-business wants to collect more than one program of interest on all information
-request forms.
+business wants to allow prospects to indicate more than one program of interest
+on all information request forms.
 
 There forms the user experience problem: the first program of interest is the
 most important one for the user to select, but the user is not aware of the
 downstream limitation! This problem has forced the evolution of the program
 select composite element and has precluded the use of traditional multi-select
-widgets, as such widgets do not intuitively communicate the implicit
-significance of the **_first_** program of interest.
+widgets, as such widgets do not typically capture selection order nor
+intuitively communicate the implicit significance of the **_first_** program of
+interest.
 
 #### Advanced multi-filtering
 Through custom code, multi-filtering mode can be activated so that there may
