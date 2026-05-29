@@ -5,7 +5,7 @@ title: Webform
 subtitle_after: 'Webform: Entity Selection'
 image: inline-assets/documentation/custom-modules/deprecated.svg
 menu_title: '<svg style="color:var(--invent-orange)" class="sprite sprite--fa-exclamation-circle" aria-label="Deprecated" viewBox="0 0 512 512"><use xlink:href="#fa-exclamation-circle"></use></svg> Webform: Entity Selection'
-menu_order: 2
+menu_order: 99
 ---
 
 ## Summary
