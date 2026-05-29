@@ -34,6 +34,8 @@ will be allowed to pass while having their scores silently recorded in the
 background.
 
 ## Recaptcha composite element type
+![The ReCAPTCHA v3 element is nestled under the PSU Elements category]({{ "/assets/documentation/custom-modules/webform/recaptcha/add-recaptcha-element.png" | relative_url }})
+
 The element has two main composite fields: `token` and `score`. The `token`
 field is a hidden field that holds the reCAPTCHA token that is generated on
 the client-side by the reCAPTCHA client library. This token is sent to the
@@ -45,7 +47,44 @@ the end-user and may be used in downstream business processes.
 If an invalid or missing token is encountered, the `score` field is set to an
 empty string to differentiate it from a score of `0`.
 
+### Configuration
+![The ReCAPTCHA v3 element has unique options in its configuration interface]({{ "/assets/documentation/custom-modules/webform/recaptcha/configure-recaptcha-element.png" | relative_url }})
+
+In addition to the standard composite element options, the reCAPTCHA v3 element
+has a total of 6 customizable properties. These options can be customized on a
+form-by-form basis.
+
+#### Enable reCAPTCHA v2 fallback
+If selected, end-users may encounter checkbox challenges if they score lowly
+enough and an additional 5 options are able to be modified.
+
+#### Threshold
+This is a decimal between 0.1 and 1.0 that determines how low a score has to be
+in order to trigger a checkbox challenge. The higher the threshold is set, the
+more users will be challenged.
+
+#### Low score message
+![A checkbox challenge is presented with the text "Before proceeding, we'd like to confirm you're a human."]({{ "/assets/documentation/custom-modules/webform/recaptcha/low-score-message.png" | relative_url }})
+
+This is the message that the end-user will be presented with should they score
+below the threshold.
+
+#### Recaptcha v3 message (no token)
+![A checkbox challenge is presented with the text "Before proceeding, we'd like to confirm you're a human. You may need to permit Google to run scripts on this page."]({{ "/assets/documentation/custom-modules/webform/recaptcha/no-token-message.png" | relative_url }})
+
+This is the message that the end-user will be presented with should their
+browser fail to include a token with its form submission data. This can happen
+if certain browser privacy extensions are blocking Google reCAPTCHA.
+
+#### Recaptcha v2 message
+![A checkbox challenge is presented with the text "Please check the 'I'm not a robot' box"]({{ "/assets/documentation/custom-modules/webform/recaptcha/recaptcha-v2-message.png" | relative_url }})
+
+This is the message that the end-user will see if they attempt to re-submit the
+form without solving the checkbox challenge if they are presented with one.
+
 ## Downstream processing
+![The reCAPTCHA v3 score is saved along with the submission for downstream processing]({{ "/assets/documentation/custom-modules/webform/recaptcha/admin-view.png" | relative_url }})
+
 Given the score is saved as a persistent data point, it may be used in
 conditional handlers. For example, if a form wishes to silently discard any
 submissions with a score less than 0.4, that is a decision that can be made
