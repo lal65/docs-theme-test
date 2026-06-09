@@ -92,6 +92,88 @@ by the form owner.
 
 In practice, the scores are pushed to the data layer on the submission event.
 
+## Custom data layer events
+Out of the box, there is little client-side observability with interactive
+challenges. Because of this, custom data layer events have been added to give
+Marketing visibility into how many reCAPTCHA 2 challenges are:
+
+- Rendered
+- Solved
+- Expired
+- Get an error
+
+### Rendered event
+This event is pushed whenever a reCAPTCHA 2 challenge is shown to the user.
+Multiple events may be pushed if the user fails to complete the challenge and
+attempts to resubmit the form anyway.
+
+```json
+{
+  "event": "recaptcha",
+  "eventAction": "rendered",
+  "formID": "<the form id>"
+}
+```
+
+### Solved event
+This event is pushed whenever Google's client-side scripting indicates that a
+user has successfully completed the reCAPTCHA 2 challenge.
+
+**Note: Just because a user has solved the challenge does not necessarily mean
+that their submission will be accepted!** Challenge solves do time out and can
+still fail server-side validation when the result is assessed via API.
+
+```json
+{
+  "event": "recaptcha",
+  "eventAction": "solved",
+  "formID": "<the form id>"
+}
+```
+
+### Expired event
+This event is pushed whenever Google's client-side scripting indicates that a
+user has successfully completed the reCAPTCHA 2 challenge, but has waited too
+long to submit the form. When this fires, a new reCAPTCHA 2 challenge will be
+rendered, **_but will not automatically re-fire the rendered event_**.
+
+```json
+{
+  "event": "recaptcha",
+  "eventAction": "expired",
+  "formID": "<the form id>"
+}
+```
+
+### Error event
+This event is pushed whenever Google's client-side scripting detects an error
+condition. For example, loss of network connectivity between the user's browser
+and the reCAPTCHA service will cause an error event to be pushed.
+
+```json
+{
+  "event": "recaptcha",
+  "eventAction": "error",
+  "formID": "<the form id>"
+}
+```
+
+### Looker Studio reporting
+All data layer events are fed into the
+[Suspicious Leads Dashboard](https://datastudio.google.com/reporting/4932f1a6-3869-42f0-97fb-69f417e63301/page/p_vynoyaet0d).
+
+![The looker studio report gives a very detailed view into reCAPTCHA events and is filterable by campaign, browser, and other criteria]({{ "/assets/documentation/custom-modules/webform/recaptcha/looker-studio-example-report.png" | relative_url }})
+
+This report allows filtering by session source, medium, campaign, date range,
+country, state, form ID, page path, and other criteria. It gives a rolled-up
+at-a-glance view of period-over-period trends and visual graphs that highlight
+trends in affiliate platforms. This dashboard is intended to function as an
+early warning system for newly emerging suspicious traffic patterns.
+
+The report is maintained by Wendel Hullihen <wmh5034@psu.edu> and Nora Price
+<nqp5361@psu.edu> and is operationally used by Marketing and the
+[WC Suspicious Leads Task Force](https://teams.microsoft.com/l/chat/19:3cf260fefa6c49fd98908e7c05c42904@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D).
+
 ## Technical debt
 In late 2025, Google announced a new product enhancement called
 [Policy Based Challenges](https://security.googlecloudcommunity.com/community-blog-42/stop-guessing-start-challenging-introducing-recaptcha-s-policy-based-challenges-5995)
